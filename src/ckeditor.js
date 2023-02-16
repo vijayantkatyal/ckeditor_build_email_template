@@ -75,10 +75,10 @@ import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount.js';
 import EditorWatchdog from '@ckeditor/ckeditor5-watchdog/src/editorwatchdog.js';
 
-// import {
-//     Emoji, EmojiActivity, EmojiFlags, EmojiFood, EmojiNature, EmojiObjects, EmojiPeople,
-//     EmojiPlaces, EmojiSymbols
-// } from '@phudak/ckeditor5-emoji/src';
+import {
+    Emoji, EmojiActivity, EmojiFlags, EmojiFood, EmojiNature, EmojiObjects, EmojiPeople,
+    EmojiPlaces, EmojiSymbols
+} from './plugins/emoji/src/index';
 
 import LetterCase from './plugins/letter-case/letter-case';
 
@@ -154,16 +154,16 @@ Editor.builtinPlugins = [
 	TodoList,
 	Underline,
 	WordCount,
-	LetterCase
-	// Emoji,
-    // EmojiPeople,
-    // EmojiNature,
-    // EmojiPlaces,
-    // EmojiFood,
-    // EmojiActivity,
-    // EmojiObjects,
-    // EmojiSymbols,
-    // EmojiFlags
+	LetterCase,
+	Emoji,
+    EmojiPeople,
+    EmojiNature,
+    EmojiPlaces,
+    EmojiFood,
+    EmojiActivity,
+    EmojiObjects,
+    EmojiSymbols,
+    EmojiFlags
 ];
 
 // Editor configuration.
@@ -207,7 +207,7 @@ Editor.defaultConfig = {
 			'mediaEmbed',
 			'htmlEmbed',
 			'specialCharacters',
-			// 'emoji',
+			'emoji',
 			'pageBreak',
 			'|',
 			'findAndReplace',
