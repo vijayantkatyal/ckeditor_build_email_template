@@ -75,7 +75,7 @@ import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount.js';
 import EditorWatchdog from '@ckeditor/ckeditor5-watchdog/src/editorwatchdog.js';
 
-// import LetterCase from 'ckeditor5-letter-case';
+import LetterCase from 'ckeditor5-letter-case';
 
 class Editor extends ClassicEditorBase {}
 
@@ -148,8 +148,8 @@ Editor.builtinPlugins = [
 	TextTransformation,
 	TodoList,
 	Underline,
-	WordCount
-	// LetterCase
+	WordCount,
+	LetterCase
 ];
 
 // Editor configuration.
@@ -180,7 +180,7 @@ Editor.defaultConfig = {
 			'alignment',
 			'subscript',
 			'superscript',
-			// 'LetterCase',
+			'LetterCase',
 			'-',
 			'outdent',
 			'indent',
