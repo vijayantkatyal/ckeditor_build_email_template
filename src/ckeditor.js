@@ -80,7 +80,7 @@ import EditorWatchdog from '@ckeditor/ckeditor5-watchdog/src/editorwatchdog.js';
 //     EmojiPlaces, EmojiSymbols
 // } from '@phudak/ckeditor5-emoji/src';
 
-import LetterCase from 'ckeditor5-letter-case';
+// import LetterCase from 'ckeditor5-letter-case';
 
 class Editor extends ClassicEditorBase {}
 
@@ -154,7 +154,7 @@ Editor.builtinPlugins = [
 	TodoList,
 	Underline,
 	WordCount,
-	LetterCase,
+	// LetterCase,
 	// Emoji,
     // EmojiPeople,
     // EmojiNature,
@@ -194,7 +194,7 @@ Editor.defaultConfig = {
 			'alignment',
 			'subscript',
 			'superscript',
-			'LetterCase',
+			// 'LetterCase',
 			'-',
 			'outdent',
 			'indent',
