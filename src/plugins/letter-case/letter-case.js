@@ -6,6 +6,8 @@ import Collection from "@ckeditor/ckeditor5-utils/src/collection";
 import Model from "@ckeditor/ckeditor5-ui/src/model";
 import { upperCase, lowerCase, titleCase, sentenceCase, toggleCase, getText } from "./utils";
 
+import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
+
 import LetterCaseIcon from "./letter-case.svg";
 
 // Lis of Change Case Options Available
@@ -64,6 +66,37 @@ export default class LetterCase extends Plugin {
 
       return dropdownView;
     });
+
+    const editor = this.editor;
+
+    for (const option of LetterCaseOptions) {
+      editor.ui.componentFactory.add(option.mode, () => {
+
+        // editor.commands.add(option.mode, new LetterCaseCommand(editor));
+        
+        const button = new ButtonView();
+        
+        button.set( {
+          label: option.text,
+          tooltip: option.text,
+          withText: true
+        });
+
+        // const command = editor.commands.get("LetterCase");
+        // console.log(command);
+
+        // button.bind("isEnabled").to(command);
+
+        this.listenTo( button, 'execute', () => {
+          // console.log("trigger");
+          editor.execute('LetterCase', option.mode);
+        });
+
+        return button;
+
+      });
+    }
+
   }
 
   // Generate Item Definitions for UI

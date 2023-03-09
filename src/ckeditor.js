@@ -194,7 +194,7 @@ Editor.defaultConfig = {
 			'alignment',
 			'subscript',
 			'superscript',
-			'LetterCase',
+			// 'LetterCase',
 			'-',
 			'outdent',
 			'indent',
@@ -212,7 +212,13 @@ Editor.defaultConfig = {
 			'|',
 			'findAndReplace',
 			'codeBlock',
-			'sourceEditing'
+			'sourceEditing',
+			'-',
+			'sentenceCase',
+			'lowerCase',
+			'upperCase',
+			'titleCase',
+			'toggleCase'
 		],
 		shouldNotGroupWhenFull: true
 	},
