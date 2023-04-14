@@ -4,7 +4,11 @@ import Command from "@ckeditor/ckeditor5-core/src/command";
 import { addListToDropdown, createDropdown } from "@ckeditor/ckeditor5-ui/src/dropdown/utils";
 import Collection from "@ckeditor/ckeditor5-utils/src/collection";
 import Model from "@ckeditor/ckeditor5-ui/src/model";
-import { upperCase, lowerCase, titleCase, sentenceCase, toggleCase, getText, uniCodeNormal, uniCodeBoldCase, uniCodeItalicCase, uniCodeMonospaceCase } from "./utils";
+import {
+  upperCase, lowerCase, titleCase, sentenceCase, toggleCase, getText,
+  uniCodeNormal, uniCodeBoldCase, uniCodeItalicCase, uniCodeMonospaceCase, uniCodeUnderlineCase, uniCodeStrikethroughCase, uniCodesansBoldItalicCase,
+  uniCodecircledCase, uniCodecircledNegativeCase, uniCodesquaredCase
+} from "./utils";
 
 import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
 
@@ -47,6 +51,30 @@ const LetterCaseOptions = [
   {
     text: "M",
     mode: "uniCodeMonospaceCase"
+  },
+  {
+    text: "U",
+    mode: "uniCodeUnderlineCase"
+  },
+  {
+    text: "S",
+    mode: "uniCodeStrikethroughCase"
+  },
+  {
+    text: "𝘽𝙄",
+    mode: "uniCodesansBoldItalicCase"
+  },
+  {
+    text: "Ⓒ",
+    mode: "uniCodecircledCase",
+  },
+  {
+    text: "🅒",
+    mode: "uniCodecircledNegativeCase"
+  },
+  {
+    text: "🅂",
+    mode: "uniCodesquaredCase"
   }
 ];
 
@@ -183,6 +211,30 @@ class LetterCaseCommand extends Command {
 
         case 'uniCodeMonospaceCase':
           targetText = uniCodeMonospaceCase(sourceText);
+          break;
+
+        case 'uniCodeUnderlineCase':
+          targetText = uniCodeUnderlineCase(sourceText);
+          break;
+        
+        case 'uniCodeStrikethroughCase':
+          targetText = uniCodeStrikethroughCase(sourceText);
+          break;
+
+        case 'uniCodesansBoldItalicCase':
+          targetText = uniCodesansBoldItalicCase(sourceText);
+          break;
+
+        case 'uniCodecircledCase':
+          targetText = uniCodecircledCase(sourceText);
+          break;
+
+        case 'uniCodecircledNegativeCase':
+          targetText = uniCodecircledNegativeCase(sourceText);
+          break;
+
+        case 'uniCodesquaredCase':
+          targetText = uniCodesquaredCase(sourceText);
           break;
 
         default:

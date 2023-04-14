@@ -129,6 +129,34 @@ export const uniCodeMonospaceCase = (text) => {
 	return formatText(text, "monospace");
 }
 
+export const uniCodeUnderlineCase = (text) => {
+	return formatText(text, "", {
+		append: "͟"
+	});
+}
+
+export const uniCodeStrikethroughCase = (text) => {
+	return formatText(text, "", {
+		append: "̶"
+	});
+}
+
+export const uniCodesansBoldItalicCase = (text) => {
+	return formatText(text, "sansBoldItalic");
+}
+
+export const uniCodecircledCase = (text) => {
+	return formatText(text, "circled");
+}
+
+export const uniCodecircledNegativeCase = (text) => {
+	return formatText(text, "circledNegative");
+}
+
+export const uniCodesquaredCase = (text) => {
+	return formatText(text, "squared");
+}
+
 export const getText = (range) => {
 	return Array.from(range.getItems()).reduce((rangeText, node) => {
 		if (node.is('softBreak')) {

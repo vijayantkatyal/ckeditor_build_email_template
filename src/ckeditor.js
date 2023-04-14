@@ -223,7 +223,13 @@ Editor.defaultConfig = {
 			'uniCodeNormal',
 			'uniCodeBoldCase',
 			'uniCodeItalicCase',
-			'uniCodeMonospaceCase'
+			'uniCodeMonospaceCase',
+			'uniCodeUnderlineCase',
+			'uniCodeStrikethroughCase',
+			'uniCodesansBoldItalicCase',
+			'uniCodecircledCase',
+			'uniCodecircledNegativeCase',
+			'uniCodesquaredCase'
 		],
 		shouldNotGroupWhenFull: true
 	},
