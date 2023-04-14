@@ -218,7 +218,12 @@ Editor.defaultConfig = {
 			'lowerCase',
 			'upperCase',
 			'titleCase',
-			'toggleCase'
+			'toggleCase',
+			'-',
+			'uniCodeNormal',
+			'uniCodeBoldCase',
+			'uniCodeItalicCase',
+			'uniCodeMonospaceCase'
 		],
 		shouldNotGroupWhenFull: true
 	},

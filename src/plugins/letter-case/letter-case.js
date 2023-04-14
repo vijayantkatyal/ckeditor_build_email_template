@@ -4,7 +4,7 @@ import Command from "@ckeditor/ckeditor5-core/src/command";
 import { addListToDropdown, createDropdown } from "@ckeditor/ckeditor5-ui/src/dropdown/utils";
 import Collection from "@ckeditor/ckeditor5-utils/src/collection";
 import Model from "@ckeditor/ckeditor5-ui/src/model";
-import { upperCase, lowerCase, titleCase, sentenceCase, toggleCase, getText } from "./utils";
+import { upperCase, lowerCase, titleCase, sentenceCase, toggleCase, getText, uniCodeNormal, uniCodeBoldCase, uniCodeItalicCase, uniCodeMonospaceCase } from "./utils";
 
 import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
 
@@ -31,6 +31,22 @@ const LetterCaseOptions = [
   {
     text: "tOOGLE cASE",
     mode: "toggleCase"
+  },
+  {
+    text: "clear",
+    mode: "uniCodeNormal"
+  },
+  {
+    text: "𝗕",
+    mode: "uniCodeBoldCase"
+  },
+  {
+    text: "𝘐",
+    mode: "uniCodeItalicCase"
+  },
+  {
+    text: "M",
+    mode: "uniCodeMonospaceCase"
   }
 ];
 
@@ -151,6 +167,22 @@ class LetterCaseCommand extends Command {
 
         case 'toggleCase':
           targetText = toggleCase(sourceText);
+          break;
+
+        case 'uniCodeNormal':
+          targetText = uniCodeNormal(sourceText);
+          break;
+        
+        case 'uniCodeBoldCase':
+          targetText = uniCodeBoldCase(sourceText);
+          break;
+
+        case 'uniCodeItalicCase':
+          targetText = uniCodeItalicCase(sourceText);
+          break;
+
+        case 'uniCodeMonospaceCase':
+          targetText = uniCodeMonospaceCase(sourceText);
           break;
 
         default:
